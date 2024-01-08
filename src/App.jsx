@@ -265,5 +265,6 @@ function App() {
     </Accordion>
   </AccordionList>
 );
-
+}
+      
 export default App;
