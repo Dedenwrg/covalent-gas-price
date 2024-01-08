@@ -260,6 +260,7 @@ function App() {
     </Card>
   </Col>
 </Grid>
+</section>
   );
 }
 
