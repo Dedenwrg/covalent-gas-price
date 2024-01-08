@@ -155,7 +155,7 @@ function App() {
   };
 
   return (
-    <section className="w-full p-4 bg-blue-200">
+    <section className="w-full p-4 bg-blue-500">
       <header className="bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6 shadow rounded-md mb-5">
         <div className="flex items-center justify-center">
           <h2 className="font-bold inline-block text-blue-400 text-2xl">
