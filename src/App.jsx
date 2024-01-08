@@ -264,7 +264,6 @@ function App() {
       </AccordionBody>
     </Accordion>
   </AccordionList>
-  </Text>
   </Card>
   </Col>
   </Grid>
