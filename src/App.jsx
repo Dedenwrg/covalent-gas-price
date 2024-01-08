@@ -12,6 +12,7 @@ import {
   Text,
   Metric,
   Button,
+  Accordion, AccordionBody, AccordionHeader, AccordionList,
 } from "@tremor/react";
 
 function App() {
@@ -155,7 +156,7 @@ function App() {
   };
 
   return (
-    <section className="w-full p-4 bg-blue-500">
+    <section className="w-full p-4 bg-black-200">
       <header className="bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6 shadow rounded-md mb-5">
         <div className="flex items-center justify-center">
           <h2 className="font-bold inline-block text-blue-400 text-2xl">
@@ -240,35 +241,29 @@ function App() {
         </Col>
       </Grid>
 
-      <Grid numItemsSm={2} className="gap-3 mt-10">
-        <Col>
-          <Card>
-            <Title>About API Key</Title>
-            <Text>
-              If you need to get API Key, please visit{" "}
-              <a
-                href="https://www.covalenthq.com/platform/"
-                className="text-blue-500 underline"
-              >
-                Covalent Platform
-              </a>{" "}
-              and sign up for an API Key. Sign up or register on the platform to
-              obtain your exclusive and distinct API key.
-            </Text>
-          </Card>
-        </Col>
-        <Col>
-          <Card>
-            <Title>About Page</Title>
-            <Text>
-              This page was made for the Covalent bounty - Build and Deploy a
-              Chain-specific Gas Price Dashboard Using GoldRush Kit
-            </Text>
-          </Card>
-        </Col>
-      </Grid>
-    </section>
-  );
-}
+  <AccordionList className="max-w-md mx-auto">
+    <Accordion>
+      <AccordionHeader>Accordion 1</AccordionHeader>
+      <AccordionBody>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor lorem non est
+        congue blandit. Praesent non lorem sodales, suscipit est sed, hendrerit dolor.
+      </AccordionBody>
+    </Accordion>
+    <Accordion>
+      <AccordionHeader>Accordion 2</AccordionHeader>
+      <AccordionBody>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor lorem non est
+        congue blandit. Praesent non lorem sodales, suscipit est sed, hendrerit dolor.
+      </AccordionBody>
+    </Accordion>
+    <Accordion>
+      <AccordionHeader>Accordion 3</AccordionHeader>
+      <AccordionBody>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor lorem non est
+        congue blandit. Praesent non lorem sodales, suscipit est sed, hendrerit dolor.
+      </AccordionBody>
+    </Accordion>
+  </AccordionList>
+);
 
 export default App;
