@@ -12,7 +12,6 @@ import {
   Text,
   Metric,
   Button,
-  Accordion, AccordionBody, AccordionHeader, AccordionList,
 } from "@tremor/react";
 
 function App() {
@@ -217,50 +216,58 @@ function App() {
         </Col>
       </Grid>
 
-      import { Accordion, AccordionHeader, AccordionBody } from "@tremor/react";
+      <Grid numItemsSm={3} className="gap-3 mt-10">
+        <Col>
+          <Card>
+            <Title>Average Gas Price</Title>
+            <Text>1 Minutes</Text>
+            <Metric className="mt-4">{loading ? "..." : gasPrice.one}</Metric>
+          </Card>
+        </Col>
+        <Col>
+          <Card>
+            <Title>Average Gas Price</Title>
+            <Text>3 Minutes</Text>
+            <Metric className="mt-4">{loading ? "..." : gasPrice.three}</Metric>
+          </Card>
+        </Col>
+        <Col>
+          <Card>
+            <Title>Average Gas Price</Title>
+            <Text>5 Minutes</Text>
+            <Metric className="mt-4">{loading ? "..." : gasPrice.five}</Metric>
+          </Card>
+        </Col>
+      </Grid>
 
-// ...
-
-<Grid numItemsSm={2} className="gap-3 mt-10">
-  <Col>
-    <Card>
-      <Accordion>
-        <AccordionHeader>
-          <Title>About API Key</Title>
-        </AccordionHeader>
-        <AccordionBody>
-          <Text>
-            If you need to get API Key, please visit{" "}
-            <a
-              href="https://www.covalenthq.com/platform/"
-              className="text-blue-500 underline"
-            >
-              Covalent Platform
-            </a>{" "}
-            and sign up for an API Key. Sign up or register on the platform to
-            obtain your exclusive and distinct API key.
-          </Text>
-        </AccordionBody>
-      </Accordion>
-    </Card>
-  </Col>
-  <Col>
-    <Card>
-      <Accordion>
-        <AccordionHeader>
-          <Title>About Page</Title>
-        </AccordionHeader>
-        <AccordionBody>
-          <Text>
-            This page was made for the Covalent bounty - Build and Deploy a
-            Chain-specific Gas Price Dashboard Using GoldRush Kit
-          </Text>
-        </AccordionBody>
-      </Accordion>
-    </Card>
-  </Col>
-</Grid>
-</section>
+      <Grid numItemsSm={2} className="gap-3 mt-10">
+        <Col>
+          <Card>
+            <Title>About API Key</Title>
+            <Text>
+              If you need to get API Key, please visit{" "}
+              <a
+                href="https://www.covalenthq.com/platform/"
+                className="text-blue-500 underline"
+              >
+                Covalent Platform
+              </a>{" "}
+              and sign up for an API Key. Sign up or register on the platform to
+              obtain your exclusive and distinct API key.
+            </Text>
+          </Card>
+        </Col>
+        <Col>
+          <Card>
+            <Title>About Page</Title>
+            <Text>
+              This page was made for the Covalent bounty - Build and Deploy a
+              Chain-specific Gas Price Dashboard Using GoldRush Kit
+            </Text>
+          </Card>
+        </Col>
+      </Grid>
+    </section>
   );
 }
 
